@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            background-color: #f0f7f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Container styling */
+        .container {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+        }
+
+        /* Heading styles */
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Amount styles */
+        .amount {
+            font-size: 2rem;
+            color: #4CAF50; /* Green color for success */
+            margin: 10px 0;
+        }
+
+        /* Return button styling */
+        .return-button {
+            background-color: #d4e5d4;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 15px;
+            font-size: 1.2rem;
+            color: #333;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s ease;
+            text-decoration: none; /* Removes underline for link */
+            margin-top: 20px; /* Adds space above the button */
+        }
+
+        .return-button:hover {
+            background-color: #b3d9b3;
+        }
+
+        .arrow {
+            margin-left: 10px;
+        }
+
+        /* Footer styles */
+        footer {
+            margin-top: 40px; /* Space above the footer */
+            font-size: 0.9rem; /* Font size for footer */
+            color: #999; /* Text color for footer */
+            line-height: 1.5; /* Improved line height for readability */
+            text-align: center; /* Center align footer text */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Payment Success</h1>
+        <div class="amount">Amount Paid: ₱500.00</div> <!-- Example amount -->
+        <div class="amount">New Balance: ₱1500.00</div> <!-- Example new balance -->
+        
+        <a href="index.html" class="return-button">
+            Return <span class="arrow">→</span>
+        </a>
+
+        <footer>
+            Do you need assistance? Ask an authorized person <br><br>
+            Developed by RRSA | All Rights Reserved 2024
+        </footer>
+    </div>
+</body>
+</html>

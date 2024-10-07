@@ -1,0 +1,30 @@
+{% load static %}
+
+<div class="container" id = "pickupLocation">
+    <button class="return-button" id="return1">
+        Return <span class="arrow">→</span>
+    </button>
+    <h1>Select Your Pickup Location</h1>
+    <div class="buttons-container">
+        <div class="button" id ="pickup_south">
+            <img src="{% static 'challenge/icons/card.png'%}" alt="CashlessPayment Icon">
+            <span class="button-text"> Location 1 <br> <h3>South Station</h3> </span>
+        </div>
+        
+        <div class="button" id ="pickup_feu">
+            <img src="{% static 'challenge/icons/card.png'%}" alt="Cash Payment Icon">
+            <span class="button-text"> Location 2<br> <h3>FEU Alabang</h3> </span>
+        </div>
+        <div class="button" id ="pickup_festi">
+            <img src="{% static 'challenge/icons/card.png'%}" alt="Reload Card Icon">
+            <span class="button-text"> Location 3<br> <h3>Festival</span>
+        </div>
+        <div class="button" id ="location_">
+            <img src="{% static 'challenge/icons/card.png'%}" alt="Check Balance Icon">
+            <span class="button-text"> Location 4<br> <h3>New Zealand</span>
+        </div>
+    </div>
+    <footer>
+        Developed by RRSA | All Rights Reserved 2024
+    </footer>
+</div>
