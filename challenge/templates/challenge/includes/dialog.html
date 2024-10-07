@@ -1,0 +1,182 @@
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        font-family: 'Fira Sans', sans-serif;
+        background-color: #f0f7f0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .btn_dialog {
+        padding: 15px 30px;
+        font-size: 16px;
+        background-color: #4a90e2;
+        color: white;
+        border: none;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .btn_dialog:hover {
+        background-color: #357abd;
+    }
+    .modal {
+        width: 90%;
+        max-width: 600px;
+        padding: 40px;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border: none;
+        text-align: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .modal::backdrop {
+        background-color: #0000009f;
+    }
+    h1 {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    footer {
+        margin-top: 40px;
+        font-size: 1rem;
+        color: #999;
+    }
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 20px;
+        color: #333;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+    .close-btn:hover {
+        color: #e74c3c; /* Change color on hover */
+    }
+    .return{
+        background-color: #d4e5d4;
+        text-decoration: none;
+        border: none;
+        padding: 3px;
+        border-radius: 15px;
+        width: 150px;
+        text-align: center;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #333;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        margin-top: 1.5rem;
+        cursor: pointer;
+    }
+</style>
+
+<dialog class="modal" id="modalRFID">
+    <button class="close-btn closeModal" id="close-btn">&times;</button>
+    <h1>Scan your RFID card on the scanner</h1>
+    <a href="main" class="btn_dialog" type="button" id="done-btn">Retry Transaction!</a>
+    <footer>
+        Do you need assistance? Ask an authorized person <br>
+        Developed by RRSA | All Rights Reserved 2024
+    </footer>
+</dialog>
+<dialog class="modal" id="modalPayment">
+    <button class="close-btn closeModal" id="close-done-btn">&times;</button>
+    <div class="container">
+        <h1>Payment Success</h1>
+        <div class="amount">Amount Paid: ₱<span id ="paid"></span></div> <!-- Example amount -->
+        <div class="amount">New Balance: ₱<span id ='balance'></span></div> <!-- Example new balance -->
+        
+        <br><br>
+        <a href="main" class="return1">
+            Return <span class="arrow">→</span>
+        </a>
+
+        <footer>
+            Do you need assistance? Ask an authorized person <br><br>
+            Developed by RRSA | All Rights Reserved 2024
+        </footer>
+    </div>
+</dialog>
+
+  <!-- RFID DOESN'T EXIST -->
+<dialog class="modal" id="no_rfid">
+    <button class="close-btn closeModal" id="close-done-btn">&times;</button>
+
+    <div class="container">
+        <h1>RFID Is Not Yet Registered</h1>
+        <div class="amount">Please Register it to the local store</div> 
+                    <br><br>
+        <a href="" class="return">
+            Return <span class="arrow">?</span>
+        </a>
+
+        <footer>
+            Do you need assistance? Ask an authorized person <br><br>
+            Developed by RRSA | All Rights Reserved 2024
+        </footer>
+    </div>
+</dialog>
+
+<!-- NO BALANCE MODAL -->
+<dialog class="modal" id="low_balance">
+    <button class="close-btn closeModal" id="close-done-btn">&times;</button>
+    <div class="container">
+        <h1>Payment Unsuccessful</h1>
+        <div class="amount">Insufficient Balance</div> 
+                    
+        <button type="" class="return">
+            Return <span class="arrow">?</span>
+        </button>
+
+        <footer>
+            Do you need assistance? Ask an authorized person <br><br>
+            Developed by RRSA | All Rights Reserved 2024
+        </footer>
+    </div>
+</dialog>
+
+
+<dialog class="modal" id="balRFID">
+    <button class="close-btn closeModal" id="close-btn">&times;</button>
+    <h1>Scan your RFID card on the scanner</h1>
+    <a href="main" class="btn_dialog" type="button" id="done-btn">Return</a>
+    <footer>
+        Do you need assistance? Ask an authorized person <br>
+        Developed by RRSA | All Rights Reserved 2024
+    </footer>
+</dialog>
+
+<dialog class="modal" id="modalChecking">
+    <button class="close-btn closeModal" id="close-done-btn">&times;</button>
+    <div class="container">
+        <h1>Current Balance</h1>
+        <div class="amount">Balance: ₱<span id ='curr_balance'></span></div> <!-- Example new balance -->
+        
+        <br><br>
+        <a href="main" class="return1">
+            Return <span class="arrow">→</span>
+        </a>
+
+        <footer>
+            Do you need assistance? Ask an authorized person <br><br>
+            Developed by RRSA | All Rights Reserved 2024
+        </footer>
+    </div>
+</dialog>
+
+

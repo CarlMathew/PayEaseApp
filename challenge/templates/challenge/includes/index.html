@@ -1,0 +1,34 @@
+{% load static %}
+
+<div class="container" id ='index'>
+    <h1>Welcome to <span>PayEase Box</span></h1>
+    <p class="subtitle">Tap, Drop, and Roll</p>
+    <p class="subtitle">What would you like to do?</p>
+    <div class="divider"></div>
+    <p class="subtitle"><strong>Please select your transaction</strong></p>
+    <div class="buttons-container">
+        <div class="button" id = "cashless">
+            <img src="{% static 'challenge/icons/card.png'%}" alt="CashlessPayment Icon">
+            <span class="button-text"> Cashless <br> Payment </span>
+        </div>
+        
+        <div class="button" id ="cash">
+            <img src="{% static 'challenge/icons/card.png'%}" alt="Cash Payment Icon">
+            <span class="button-text">  Cash <br> Payment </span>
+        </div>
+        <div class="button">
+            <img src="{% static 'challenge/icons/card.png'%}" alt="Reload Card Icon">
+            <span class="button-text"> Reload Card Balance </span>
+        </div>
+        <div class="button" id = 'checkBal'>
+            <img src="{% static 'challenge/icons/card.png'%}" alt="Check Balance Icon">
+            <span class="button-text"> Check <br> Balance </span>
+        </div>
+    </div>
+    <footer>
+        Do you need assistance? Ask an authorized person <br> <br>
+        Developed by RRSA | All Rights Reserved 2024
+    </footer>
+</div>
+
+
